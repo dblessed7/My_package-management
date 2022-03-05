@@ -34,12 +34,15 @@ sudo unzip apache-maven-3.8.4-bin.zip
 sudo rm -rf apache-maven-3.8.4-bin.zip
 sudo mv apache-maven-3.8.4/ maven
 
-Critical Step!:
+#Critical Step!:
 
-su ec2-user     #VERY IMPORTANT, OTHERWISE, MVN WONT'T RUN!
+# ......>   su ec2-user     #VERY IMPORTANT, OTHERWISE, MVN WONT'T RUN!
 ```
 ## .#Step3) Set Environmental Variable  - For Specific User eg ec2-user
 ``` sh
+
+#MAKE SURE YOU su ec2-user before running the following command!
+
 vi ~/.bash_profile  # and add the lines below
 export M2_HOME=/opt/maven
 export PATH=$PATH:$M2_HOME/bin
@@ -49,4 +52,4 @@ export PATH=$PATH:$M2_HOME/bin
 source ~/.bash_profile
 mvn -version
 ```
-source ~/.bash_profile
+
