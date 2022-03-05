@@ -30,7 +30,7 @@ sudo chmod 777 -R /opt/tomcat9
 sudo sh /opt/tomcat9/bin/startup.sh
 # create a soft link to start and stop tomcat
 
-#Note Run the following command on ec2-user home:
+#Note Run the following command on ec2-user home: Edited by Funmi
 
 sudo ln -s /opt/tomcat9/bin/startup.sh /usr/bin/starttomcat
 sudo ln -s /opt/tomcat9/bin/shutdown.sh /usr/bin/stoptomcat
