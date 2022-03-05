@@ -41,7 +41,7 @@ sudo mv apache-maven-3.8.4/ maven
 ## .#Step3) Set Environmental Variable  - For Specific User eg ec2-user
 ``` sh
 
-#MAKE SURE YOU su ec2-user before running the following command!
+#MAKE SURE YOU su ec2-user before running the following command! Otherwise, you will always get: "command not found error message"
 
 vi ~/.bash_profile  # and add the lines below
 export M2_HOME=/opt/maven
