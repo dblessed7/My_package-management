@@ -23,11 +23,11 @@ sudo yum install java-1.8.0-openjdk-devel -y
 # Download tomcat software and extract it.
 sudo yum install wget unzip -y
 https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.21/bin/apache-tomcat-10.0.21.tar.gz
-sudo tar -xvf apache-tomcat-9.0.59.tar.gz
-sudo rm apache-tomcat-9.0.59.tar.gz
-sudo mv apache-tomcat-9.0.59 tomcat9
-sudo chmod 777 -R /opt/tomcat9
-sudo sh /opt/tomcat9/bin/startup.sh
+sudo tar -xvf apache-tomcat-10.0.21.tar.gz
+sudo rm apache-tomcat-10.0.21.tar.gz
+sudo mv apache-tomcat-10.0.21 tomcat10
+sudo chmod 777 -R /opt/tomcat10
+sudo sh /opt/tomcat10/bin/startup.sh
 # create a soft link to start and stop tomcat
 
 #Note: You need to cd back to ec2-user, be4 running these following 3 commands, to avoid error report: Edited by Funmi
