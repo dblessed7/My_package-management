@@ -33,9 +33,9 @@ sudo yum install java-11-openjdk-devel java-1.8.0-openjdk-devel -y
 ```
 ### Download nexus software and extract it (unzip).
 ```sh
-sudo wget http://download.sonatype.com/nexus/3/nexus-3.15.2-01-unix.tar.gz 
-sudo tar -zxvf nexus-3.15.2-01-unix.tar.gz
-sudo mv /opt/nexus-3.15.2-01 /opt/nexus
+sudo wget http://download.sonatype.com/nexus/3/nexus-3.36.0-01-unix.tar.gz 
+sudo tar -zxvf nexus-3.36.0-01-unix.tar.gz
+sudo mv /opt/nexus-3.36.0-01 /opt/nexus
 ```
 
 ## Grant permissions for nexus user to start and manage nexus service
