@@ -1,3 +1,7 @@
+
+================================================
+SCRIPT STARTS HERE!
+=================================================
 #!/bin/bash
 # Install and start nexus as a service 
 # This script works on RHEL 7 & 8 OS 
@@ -23,10 +27,10 @@ sudo yum install java-11-openjdk-devel java-1.8.0-openjdk-devel -y
 
 # 2. Download nexus software and extract it (unzip)
 
-sudo wget http://download.sonatype.com/nexus/3/nexus-3.15.2-01-unix.tar.gz 
-
-sudo tar -zxvf nexus-3.15.2-01-unix.tar.gz
-mv /opt/nexus-3.15.2-01 /opt/nexus
+#sudo wget http://download.sonatype.com/nexus/3/nexus-3.15.2-01-unix.tar.gz 
+sudo wget -0 nexus.tar.gz https://download.sonatype.com/nexus/3/latest-unix.tar.gz 
+sudo tar -xvf nexus.tar.gz
+sudo mv /opt/nexus-3.15.2-01 /opt/nexus
 
 
 #5 Change the owner and group permissions to /opt/nexus and /opt/sonatype-work directories.
@@ -39,8 +43,8 @@ sudo chmod -R 775 /opt/sonatype-work
 
 #6 Open /opt/nexus/bin/nexus.rc file and  uncomment run_as_user parameter and set as nexus user.
 
-vi /opt/nexus/bin/nexus.rc
-run_as_user="nexus"
+#vi /opt/nexus/bin/nexus.rc
+echo run_as_user="nexus" > /opt/nexus/bin/nexus.rc
 
 #7 CONFIGURE NEXUS TO RUN AS A SERVICE 
 
@@ -51,6 +55,17 @@ sudo systemctl enable nexus
 sudo systemctl start nexus
 sudo systemctl status nexus
 echo "end of nexus installation"
+
+
+==========================================================
+STOP THE SCRIPT HERE!
+=========================================================
+
+
+
+
+
+
 
 =====================
 access nexus on the browser
