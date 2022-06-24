@@ -21,8 +21,13 @@
 sudo useradd sonar
 # Grand sudo access to sonar user
 sudo echo "sonar ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/sonar
+sudo hostname sonar
 sudo su - sonar
-```
+sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication yes" /etc/ssh/ssh_config
+sudo service sshd restart
+sudo passwd sonar
+
+
 
 ### Install Java JDK 1.8+
 
@@ -52,3 +57,6 @@ sh /opt/sonarqube/bin/linux-x86-64/sonar.sh status
 #NOTE: ALL THE COMMANDS ABOVE ARE RUN IN /OPT
 ```
 
+
+SONAR USERNAME: admin
+SONAR PASSWORD: admin
